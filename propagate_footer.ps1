@@ -40,7 +40,7 @@ $newFooter = @"
                                 </div>
                                 <div class="contact-details">
                                     <h5>Email Us</h5>
-                                    <a href="mailto:zplussmartvisio@gmail.com">zplussmartvisio@gmail.com</a>
+                                    <a href="mailto:Gauravcctvpatna@gmail.com">Gauravcctvpatna@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -115,3 +115,4 @@ foreach ($file in $targetFiles) {
 }
 
 Write-Host "Footer Update Complete!"
+
