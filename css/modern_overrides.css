@@ -1,21 +1,26 @@
-/* Dark Mode Overrides for Gaurav CCTV Camera (ZPlus Style) */
+/* Light Mode Overrides for Gaurav CCTV Camera (White Theme) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    --bg-dark: #000000;
-    --bg-card: #0a0a0a;
-    --bg-card-hover: #121212;
+    --bg-dark: #ffffff;
+    /* Changed to White */
+    --bg-card: #f3f4f6;
+    /* Light Gray for cards */
+    --bg-card-hover: #e5e7eb;
+    /* Slightly darker gray on hover */
     --primary-blue: #3b82f6;
     --primary-blue-dark: #2563eb;
     --accent-purple: #8b5cf6;
-    --text-white: #ffffff;
-    --text-gray: #d1d5db;
-    /* Lightened for better contrast */
-    --border-color: rgba(255, 255, 255, 0.1);
+    --text-white: #111827;
+    /* Dark text */
+    --text-gray: #4b5563;
+    /* Medium gray text */
+    --border-color: rgba(0, 0, 0, 0.1);
+    /* Dark border */
     --whatsapp-green: #22c55e;
 }
 
-/* Global Reset for Dark Mode visibility */
+/* Global Reset for Light Mode visibility */
 body,
 p,
 span,
@@ -56,9 +61,30 @@ h6,
 .display-lead,
 .lead,
 .text-muted,
-.txt-black {
-    color: #9ca3af !important;
-    /* Lighter gray instead of black/dark gray */
+.txt-black,
+.text-white,
+.txt-white,
+.text-white-50,
+.txt-pink,
+.txt-blue,
+.txt-orange {
+    color: #4b5563 !important;
+    /* Force dark gray/black */
+}
+
+/* Force dark text on elements that might have been white */
+.text-white,
+.txt-white,
+.heading-main.text-white,
+.heading-main span,
+.sub-head-text {
+    color: #111827 !important;
+    /* Force Black */
+}
+
+.text-white-50 {
+    color: #6b7280 !important;
+    /* Darker gray */
 }
 
 /* Navbar */
@@ -66,9 +92,14 @@ header,
 .header-fixed,
 .top-bar,
 .bg-white,
-.navbar {
-    background-color: #050505 !important;
+.navbar,
+.bg-sky-blue,
+.bg-navy-blue,
+.bg-pink {
+    background-color: #ffffff !important;
+    color: #4b5563 !important;
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .nav-link {
@@ -96,12 +127,14 @@ section {
     background-color: var(--bg-card) !important;
     border: 1px solid var(--border-color);
     border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Added shadow */
 }
 
 .service-box p,
 .services-slider-content p,
 .client-testimonial p {
-    color: #9ca3af !important;
+    color: #4b5563 !important;
 }
 
 .service-img {
@@ -125,7 +158,8 @@ section {
 }
 
 .owl-theme .owl-nav [class*='owl-'] {
-    color: #FFF !important;
+    color: #111 !important;
+    /* Dark arrows */
     font-size: 24px !important;
     margin: 5px;
     padding: 4px 7px;
@@ -143,13 +177,16 @@ section {
 /* New Hero Section Styles */
 .hero-section {
     position: relative;
-    min-height: 90vh;
+    min-height: auto;
+    /* Removed 90vh to reduce space */
+    padding: 60px 0;
+    /* Reduced padding */
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, #111827 0%, #000000 100%);
+    background: #ffffff;
+    /* White background */
     overflow: hidden;
-    padding-top: 80px;
     text-align: center;
 }
 
@@ -157,7 +194,8 @@ section {
     position: absolute;
     width: 600px;
     height: 600px;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(59, 130, 246, 0.05);
+    /* Lighter accent */
     filter: blur(100px);
     border-radius: 50%;
     z-index: 1;
@@ -177,7 +215,8 @@ section {
     background: rgba(59, 130, 246, 0.1);
     border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: 50px;
-    color: #60a5fa;
+    color: #2563eb;
+    /* Darker blue */
     font-weight: 500;
     margin-bottom: 25px;
 }
@@ -187,15 +226,15 @@ section {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 25px;
-    background: linear-gradient(to right, #ffffff, #94a3b8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #111827;
+    /* Dark text */
+    background: none;
+    -webkit-text-fill-color: #111827;
 }
 
 .hero-highlights {
     font-size: 1.25rem;
-    color: #9ca3af;
+    color: #4b5563;
     margin-bottom: 40px;
     line-height: 1.6;
 }
@@ -216,25 +255,27 @@ section {
     padding: 12px 30px;
     font-weight: 600;
     transition: transform 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
 }
 
 .btn-theme:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
 }
 
 .btn-outline-theme {
     background: transparent !important;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #111 !important;
+    /* Dark text */
     border-radius: 50px;
     padding: 12px 30px;
     font-weight: 600;
 }
 
 .btn-outline-theme:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-color: white;
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-color: #000;
 }
 
 /* Popup Styles */
@@ -245,7 +286,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    /* lighter overlay */
     backdrop-filter: blur(5px);
     z-index: 10000;
     align-items: center;
@@ -253,14 +295,15 @@ section {
 }
 
 .popup-content {
-    background: #111;
-    border: 1px solid #333;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
     padding: 40px;
     border-radius: 16px;
     max-width: 500px;
     width: 90%;
     position: relative;
     text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .close-popup {
@@ -273,21 +316,22 @@ section {
 /* Modern Reviews Section */
 .modern-reviews-section {
     position: relative;
-    background: #000;
+    background: #ffffff;
     padding: 100px 0;
     overflow: hidden;
 }
 
 .review-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Light border */
     border-radius: 20px;
     padding: 30px;
     margin: 15px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .review-card::before {
@@ -305,7 +349,7 @@ section {
 .review-card:hover {
     transform: translateY(-5px);
     border-color: rgba(59, 130, 246, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .review-card:hover::before {
@@ -324,12 +368,12 @@ section {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--primary-blue);
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
     margin-right: 15px;
 }
 
 .reviewer-info h4 {
-    color: #fff;
+    color: #111827;
     font-size: 18px;
     font-weight: 600;
     margin: 0;
@@ -342,7 +386,7 @@ section {
 }
 
 .review-text {
-    color: #cbd5e1;
+    color: #4b5563;
     font-size: 15px;
     line-height: 1.6;
     font-style: italic;
@@ -359,15 +403,15 @@ section {
     top: 20px;
     right: 20px;
     font-size: 40px;
-    color: rgba(255, 255, 255, 0.05);
+    color: rgba(0, 0, 0, 0.05);
 }
 
 /* ==============================================
-   Contact Section - Dark Theme
+   Contact Section - Light Theme
 =============================================== */
 .contact-section-dark {
-    background-color: #000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #111827;
     padding: 80px 0;
 }
 
@@ -375,11 +419,11 @@ section {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #fff;
+    color: #111827;
 }
 
 .contact-section-dark p.lead-text {
-    color: #a0a0a0;
+    color: #4b5563;
     margin-bottom: 40px;
     font-size: 16px;
     line-height: 1.6;
@@ -412,12 +456,12 @@ section {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #fff;
+    color: #111827;
 }
 
 .contact-details p,
 .contact-details a {
-    color: #a0a0a0;
+    color: #4b5563;
     margin-bottom: 0;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -451,7 +495,8 @@ section {
     height: 400px;
     border: 0;
     border-radius: 15px;
-    filter: invert(90%) hue-rotate(180deg);
+    filter: none;
+    /* No invert for light mode */
 }
 
 /* ==============================================
@@ -490,15 +535,47 @@ section {
         line-height: 1.6 !important;
     }
 
-    /* Full Width Images */
+    /* Reduced Section Padding */
+    .wide-tb-100 {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .modern-reviews-section,
+    .contact-section-dark {
+        padding: 40px 0 !important;
+    }
+
+    /* Compact Images for Mobile */
     .service-img img,
     .blog-wrap-dark img,
     .txt-over-img img {
         width: 100% !important;
-        height: auto !important;
-        max-height: 300px;
+        height: 200px !important;
+        /* Reduced from auto/300px */
         object-fit: cover;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    .blog-content {
+        padding: 15px !important;
+        /* Compact content padding */
+    }
+
+    .blog-content h4 {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .blog-content p {
+        font-size: 14px !important;
+        /* Smaller text for compactness */
+        margin-bottom: 15px !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* Limit text lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     /* Larger Reviewer Images */
@@ -530,28 +607,41 @@ section {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
+        /* Reduced from 40px for tighter spacing */
         background: #ffffff;
-        /* White background as requested */
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        /* Add shadow for depth */
+        padding: 30px 20px;
+        /* Increased top/bottom padding */
+        border-radius: 16px;
+        /* softer corners */
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+        /* Softer, more diffuse shadow */
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        /* Very subtle border */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-item:active {
+        transform: scale(0.98);
+        /* Touch feedback */
     }
 
     .contact-item h5 {
-        color: #000000 !important;
-        /* Dark text for white bg */
+        color: #111827 !important;
+        /* Darker black for heading */
+        margin-top: 15px;
+        font-weight: 700 !important;
     }
 
     .contact-item p,
     .contact-item a {
-        color: #333333 !important;
-        /* Dark text for white bg */
+        color: #4b5563 !important;
+        /* Dark gray for text */
     }
 
     .contact-details {
         text-align: center;
+        width: 100%;
     }
 
     .hero-section {
