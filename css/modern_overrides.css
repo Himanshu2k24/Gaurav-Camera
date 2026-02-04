@@ -765,10 +765,14 @@ section {
 .contact-item {
     padding: 12px 15px !important;
     /* Reduced padding */
-    margin-bottom: 12px !important;
-    /* Reduced margin */
+    margin-bottom: 0 !important;
+    /* Managed by grid gap/mb-3 */
     align-items: center !important;
     /* Ensure vertical center alignment */
+    height: 100%;
+    /* Ensure equal height in grid */
+    display: flex;
+    /* Ensure flex behavior */
 }
 
 /* Smaller Icon Circle */
@@ -819,4 +823,50 @@ section {
         /* Compact padding */
         margin-bottom: 0 !important;
     }
+}
+
+/* 
+   --------------------------------------------------------------------------------------
+   Adjusting Benefits Section Image
+   The user requested "Please adjust this image also".
+   Adding border radius and shadow to match the theme.
+   -------------------------------------------------------------------------------------- 
+*/
+.video-popup-link img {
+    border-radius: 20px !important;
+    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    /* Soft shadow */
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Optional: If it needs to be smaller on mobile */
+@media (max-width: 768px) {
+    .video-popup-link img {
+        max-width: 90% !important;
+        /* Slightly smaller on mobile to not touch edges */
+        margin: 0 auto !important;
+    }
+}
+
+/* 
+   --------------------------------------------------------------------------------------
+   Fixing Mobile Menu Visibility
+   The user reported the menu was invisible on phone.
+   Cause: White Icon on White Background.
+   Fix: changing icon bars to Dark Blue.
+   -------------------------------------------------------------------------------------- 
+*/
+.navbar-toggler .icon-bar {
+    background-color: #111827 !important;
+    /* Dark Gray / Black */
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    /* Subtle border definition */
+    padding: 5px !important;
+    /* Ensure touch target size */
 }
