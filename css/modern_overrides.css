@@ -453,3 +453,127 @@ section {
     border-radius: 15px;
     filter: invert(90%) hue-rotate(180deg);
 }
+
+/* ==============================================
+   Mobile Responsiveness Overrides
+=============================================== */
+@media (max-width: 768px) {
+
+    /* Larger Headings */
+    h1,
+    .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    h2,
+    .display-head {
+        font-size: 2rem !important;
+        line-height: 1.3 !important;
+    }
+
+    h3,
+    .h3-md,
+    .contact-details h5,
+    .reviewer-info h4 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Larger Body Text */
+    body,
+    p,
+    .lead-text,
+    .review-text,
+    .hero-highlights,
+    li {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Full Width Images */
+    .service-img img,
+    .blog-wrap-dark img,
+    .txt-over-img img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    /* Larger Reviewer Images */
+    .reviewer-img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    /* Contact Icons Bigger */
+    .contact-icon-circle {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 15px;
+        margin-right: 0 !important;
+    }
+
+    .contact-icon-circle i {
+        font-size: 28px !important;
+    }
+
+    /* Container Padding */
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* Layout Adjustments */
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+        background: #ffffff;
+        /* White background as requested */
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        /* Add shadow for depth */
+    }
+
+    .contact-item h5 {
+        color: #000000 !important;
+        /* Dark text for white bg */
+    }
+
+    .contact-item p,
+    .contact-item a {
+        color: #333333 !important;
+        /* Dark text for white bg */
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-theme,
+    .btn-outline-theme {
+        width: 100%;
+        font-size: 18px !important;
+        padding: 15px !important;
+    }
+
+    .review-card {
+        margin: 10px 0;
+        padding: 20px;
+    }
+}
