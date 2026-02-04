@@ -667,3 +667,156 @@ section {
         padding: 20px;
     }
 }
+
+/* 
+   --------------------------------------------------------------------------------------
+   Restoring Colorful Stats Cards
+   The user requested "Make it colorful". The generic white theme overrides were making
+   these cards white. We are restoring specific colors for them.
+   -------------------------------------------------------------------------------------- 
+*/
+
+.counter-coloured {
+    border: none !important;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.counter-coloured.bg-navy-blue {
+    background-color: #003975 !important;
+    /* Original Navy Blue */
+    color: #ffffff !important;
+}
+
+.counter-coloured.bg-pink {
+    background-color: #fe5454 !important;
+    /* Original Pink (Reddish) */
+    color: #ffffff !important;
+}
+
+/* Ensure text inside is white */
+.counter-coloured.bg-navy-blue span,
+.counter-coloured.bg-navy-blue .head,
+.counter-coloured.bg-pink span,
+.counter-coloured.bg-pink .head {
+    color: #ffffff !important;
+}
+
+/* 
+   --------------------------------------------------------------------------------------
+   Restoring Colorful Contact Cards
+   The user reported the contact section looked "Worst" (too plain).
+   We are applying the Navy Blue and Pink theme to these cards.
+   -------------------------------------------------------------------------------------- 
+*/
+
+.contact-item {
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item.contact-navy-blue {
+    background-color: #003975 !important;
+    /* Navy Blue */
+    color: #ffffff !important;
+}
+
+.contact-item.contact-pink {
+    background-color: #fe5454 !important;
+    /* Pink */
+    color: #ffffff !important;
+}
+
+/* Ensure text inside is white for these colorful cards */
+.contact-item.contact-navy-blue h5,
+.contact-item.contact-navy-blue p,
+.contact-item.contact-navy-blue a,
+.contact-item.contact-pink h5,
+.contact-item.contact-pink p,
+.contact-item.contact-pink a {
+    color: #ffffff !important;
+}
+
+.contact-item.contact-navy-blue .contact-icon-circle,
+.contact-item.contact-pink .contact-icon-circle {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.contact-item.contact-navy-blue i,
+.contact-item.contact-pink i {
+    color: #ffffff !important;
+}
+
+/* 
+   --------------------------------------------------------------------------------------
+   Compacting Contact Cards
+   The user requested "its look too big make its small".
+   Reducing padding, icon size, and margins.
+   -------------------------------------------------------------------------------------- 
+*/
+
+/* Compact Contact Cards Override */
+.contact-item {
+    padding: 12px 15px !important;
+    /* Reduced padding */
+    margin-bottom: 12px !important;
+    /* Reduced margin */
+    align-items: center !important;
+    /* Ensure vertical center alignment */
+}
+
+/* Smaller Icon Circle */
+.contact-item .contact-icon-circle {
+    width: 38px !important;
+    height: 38px !important;
+    margin-right: 15px !important;
+}
+
+.contact-item .contact-icon-circle i {
+    font-size: 16px !important;
+}
+
+/* Smaller Text */
+.contact-item h5 {
+    font-size: 16px !important;
+    margin-bottom: 2px !important;
+}
+
+.contact-item p,
+.contact-item a {
+    font-size: 13px !important;
+}
+
+/* 
+   --------------------------------------------------------------------------------------
+   Compacting Hero Buttons
+   The user reported the buttons looked "too big".
+   Restoring natural width and reducing size on mobile.
+   -------------------------------------------------------------------------------------- 
+*/
+@media (max-width: 768px) {
+    .hero-btns {
+        flex-direction: row !important;
+        /* Try to fit side-by-side */
+        flex-wrap: wrap !important;
+        width: auto !important;
+        gap: 10px !important;
+    }
+
+    .btn-theme,
+    .btn-outline-theme {
+        width: auto !important;
+        /* Prevent full width */
+        font-size: 14px !important;
+        /* Smaller text */
+        padding: 10px 20px !important;
+        /* Compact padding */
+        margin-bottom: 0 !important;
+    }
+}
