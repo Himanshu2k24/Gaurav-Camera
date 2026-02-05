@@ -1,7 +1,9 @@
-/* Custom Features for Gaurav CCTV (ZPlus Style) */
+﻿/* Custom Features for Gaurav CCTV (ZPlus Style) */
 
 document.addEventListener("DOMContentLoaded", function () {
     // --- 1. Lead Generation Popup Logic ---
+    // --- 1. Lead Generation Popup Logic REMOVED per user request ---
+    /*
     const popupHtml = `
     <div id="lead-popup">
         <div class="popup-content">
@@ -10,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="text-gray mb-4">Secure your home or office with Patna's #1 CCTV Experts.</p>
             
             <div class="cta-buttons justify-content-center">
-                <a href="tel:+918046059607" class="btn-theme">
+                <a href="tel:+917070905318" class="btn-theme">
                     <i class="icofont-phone"></i> Call Now
                 </a>
-                <a href="https://wa.me/918046059607" class="btn-theme bg-green">
+                <a href="https://wa.me/917070905318" class="btn-theme bg-green">
                     <i class="icofont-whatsapp"></i> WhatsApp
                 </a>
             </div>
@@ -41,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (event.target == popup) popup.style.display = 'none';
         };
     }
+    */
 
     // --- 2. Reviews Injection (Index Page Specific) ---
     // Targeted injection into existing container or creating a new one if not matching
@@ -49,3 +52,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // (This part is handled by the static HTML update or script replacement below)
 });
+
