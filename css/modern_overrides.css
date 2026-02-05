@@ -761,47 +761,232 @@ section {
    -------------------------------------------------------------------------------------- 
 */
 
-/* Compact Contact Cards Override */
+/* 
+   --------------------------------------------------------------------------------------
+   Bold Solid Colored Cards (User Requested "Attractive One by One")
+   -------------------------------------------------------------------------------------- 
+*/
+
 .contact-item {
-    padding: 12px 15px !important;
-    /* Reduced padding */
-    margin-bottom: 0 !important;
-    /* Managed by grid gap/mb-3 */
-    align-items: center !important;
-    /* Ensure vertical center alignment */
-    height: 100%;
-    /* Ensure equal height in grid */
+    background-color: #fff;
+    /* Default fallback */
+    padding: 25px;
+    border-radius: 4px;
+    /* Slight radius or sharp as per bold look */
+    margin-bottom: 20px !important;
+    /* Bold gap between cards */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
     display: flex;
-    /* Ensure flex behavior */
+    flex-direction: row;
+    /* Icon Left, Text Right */
+    align-items: center;
+    /* Vertically centered */
+    justify-content: flex-start;
+    /* Left aligned */
+    text-align: left;
+    border: none;
+    width: 100%;
 }
 
-/* Smaller Icon Circle */
+.contact-item:hover {
+    transform: translateY(-5px);
+    /* Lift */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Bold Background Colors */
+.contact-item.contact-navy-blue {
+    background-color: #003366 !important;
+    /* Deep Navy Blue */
+    color: #ffffff !important;
+}
+
+.contact-item.contact-pink {
+    background-color: #ff5252 !important;
+    /* Vibrant Red/Coral */
+    color: #ffffff !important;
+}
+
+/* Icons - Lighter Circle on Background */
 .contact-item .contact-icon-circle {
-    width: 38px !important;
-    height: 38px !important;
-    margin-right: 15px !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact-item .contact-icon-circle i {
-    font-size: 16px !important;
+.contact-item.contact-navy-blue .contact-icon-circle {
+    background: rgba(255, 255, 255, 0.2) !important;
+    /* Semi-transparent white */
+    border: none;
 }
 
-/* Smaller Text */
+.contact-item.contact-pink .contact-icon-circle {
+    background: rgba(255, 255, 255, 0.2) !important;
+    /* Semi-transparent white */
+    border: none;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #ffffff !important;
+}
+
+/* Typography */
+.contact-item .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .contact-item h5 {
-    font-size: 16px !important;
-    margin-bottom: 2px !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
 .contact-item p,
 .contact-item a {
-    font-size: 13px !important;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    /* Larger text for bold look */
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.contact-item a:hover {
+    opacity: 0.8;
+}
+
+/* Dark Section Background Requirement */
+.contact-section-dark {
+    background-color: #000000 !important;
+    /* Pure Black Background */
+    color: #fff;
+}
+
+.contact-section-dark h2 {
+    color: #fff !important;
+}
+
+.contact-section-dark p.lead-text {
+    color: #cbd5e1 !important;
+}
+
+/* Mobile Overrides */
+/* Mobile Overrides */
+/* Mobile Overrides (Compact & Clean) */
+@media (max-width: 768px) {
+    .contact-item {
+        flex-direction: column !important;
+        /* Stack vertically */
+        align-items: center !important;
+        /* Center align items */
+        text-align: center !important;
+        /* Center text */
+
+        padding: 12px 15px !important;
+        /* Drastically Reduced Padding */
+        margin-bottom: 12px !important;
+        /* Reduced Gap */
+        border-radius: 12px !important;
+        /* Slightly tighter radius */
+        height: auto !important;
+        /* Ensure auto height */
+        min-height: 0 !important;
+        /* Force no min-height */
+
+        /* Premium Shadow for Depth */
+        box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Premium Gradients on Mobile */
+    .contact-item.contact-navy-blue {
+        background: linear-gradient(135deg, #0f172a 0%, #172554 100%) !important;
+    }
+
+    .contact-item.contact-pink {
+        background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%) !important;
+    }
+
+    .contact-item .contact-icon-circle {
+        width: 45px !important;
+        /* Reduced Icon Size */
+        height: 45px !important;
+        margin-right: 0 !important;
+        /* Remove right margin */
+        margin-bottom: 8px !important;
+        /* Tighter spacing to text */
+        background: rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-item i {
+        font-size: 20px !important;
+        /* Smaller icon */
+    }
+
+    .contact-item .contact-details {
+        align-items: center !important;
+        /* Center text column */
+        width: 100%;
+    }
+
+    .contact-item h5 {
+        font-size: 0.95rem !important;
+        /* Compact Heading */
+        margin-bottom: 2px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        line-height: 1.2 !important;
+    }
+
+    .contact-item p,
+    .contact-item a {
+        font-size: 0.9rem !important;
+        /* Compact details */
+        opacity: 0.9;
+        line-height: 1.2 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Ensure Layout Stays Column on Mobile for ALL cards including Visit Us */
+    .col-12 .contact-item {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        padding: 12px 15px !important;
+    }
+
+    .col-12 .contact-item .contact-details {
+        text-align: center !important;
+    }
+
+    .col-12 .contact-item .contact-icon-circle {
+        margin-right: 0 !important;
+        margin-bottom: 8px !important;
+    }
 }
 
 /* 
-   --------------------------------------------------------------------------------------
-   Compacting Hero Buttons
-   The user reported the buttons looked "too big".
-   Restoring natural width and reducing size on mobile.
+   -------------------------------------------------------------------------------------- 
+   Compacting Hero Buttons 
+   The user reported the buttons looked "too big". 
+   Restoring natural width and reducing size on mobile. 
    -------------------------------------------------------------------------------------- 
 */
 @media (max-width: 768px) {
