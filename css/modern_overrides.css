@@ -584,12 +584,14 @@ section {
         height: 80px !important;
     }
 
-    /* Contact Icons Bigger */
+    /* Contact Icons Bigger - Adjusted for Row Layout */
     .contact-icon-circle {
         width: 60px !important;
         height: 60px !important;
-        margin-bottom: 15px;
-        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        /* Remove bottom margin */
+        margin-right: 20px !important;
+        /* Restore right margin */
     }
 
     .contact-icon-circle i {
@@ -604,20 +606,18 @@ section {
 
     /* Layout Adjustments */
     .contact-item {
-        flex-direction: column;
+        flex-direction: row !important;
+        /* Force Row Layout */
         align-items: center;
-        text-align: center;
+        text-align: left;
+        /* Left align text */
         margin-bottom: 25px;
-        /* Reduced from 40px for tighter spacing */
         background: #ffffff;
-        padding: 30px 20px;
-        /* Increased top/bottom padding */
+        padding: 20px;
+        /* Reduced padding */
         border-radius: 16px;
-        /* softer corners */
         box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-        /* Softer, more diffuse shadow */
         border: 1px solid rgba(0, 0, 0, 0.03);
-        /* Very subtle border */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -628,20 +628,20 @@ section {
 
     .contact-item h5 {
         color: #111827 !important;
-        /* Darker black for heading */
-        margin-top: 15px;
+        margin-top: 0 !important;
+        /* Remove top margin */
         font-weight: 700 !important;
     }
 
     .contact-item p,
     .contact-item a {
         color: #4b5563 !important;
-        /* Dark gray for text */
     }
 
     .contact-details {
-        text-align: center;
-        width: 100%;
+        text-align: left;
+        /* Left align details */
+        width: auto;
     }
 
     .hero-section {
