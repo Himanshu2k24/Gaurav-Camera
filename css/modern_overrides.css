@@ -211,14 +211,36 @@ section {
 
 .hero-badge {
     display: inline-block;
-    padding: 8px 16px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 10px 24px;
+    background: #ffffff;
+    border: none;
     border-radius: 50px;
-    color: #2563eb;
-    /* Darker blue */
-    font-weight: 500;
+    color: #111;
+    font-weight: 700;
     margin-bottom: 25px;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hero-badge::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    border-radius: 52px;
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6, #06b6d4);
+    opacity: 1;
+}
+
+.hero-badge span {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .hero-title {
