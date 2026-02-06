@@ -1055,3 +1055,101 @@ section {
     padding: 5px !important;
     /* Ensure touch target size */
 }
+
+/* 
+   --------------------------------------------------------------------------------------
+   Quick Connect Call & WhatsApp Buttons - Enhanced Design
+   -------------------------------------------------------------------------------------- 
+*/
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.btn-call-large,
+.btn-whatsapp-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    /* Make them equal width */
+    min-width: 140px;
+}
+
+/* Call Button - Stylish Blue/Gradient */
+.btn-call-large {
+    background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+    color: #ffffff !important;
+    border: 2px solid transparent;
+}
+
+.btn-call-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 114, 255, 0.4);
+    background: linear-gradient(135deg, #0072FF 0%, #00C6FF 100%);
+}
+
+.btn-call-large i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* WhatsApp Button - Stylish Green/Gradient */
+.btn-whatsapp-large {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff !important;
+    border: 2px solid transparent;
+}
+
+.btn-whatsapp-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+
+.btn-whatsapp-large i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+/* Add Phone Wiggle Animation on hover or statically */
+.btn-call-large i {
+    animation: phone-wiggle 3s infinite;
+}
+
+@keyframes phone-wiggle {
+
+    0%,
+    10% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
